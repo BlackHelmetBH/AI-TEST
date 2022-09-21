@@ -1,0 +1,255 @@
+# stat_txt.tbl entry 1076: Protoss 1 - Zerg Town<0>
+Pro1(1076, 011, aiscript):
+	start_campaign()
+	start_town()
+	wait(1)
+
+	defaultbuild_off()
+	default_min(0)
+	wait(1)
+
+	define_max(30, Zerg Drone)
+	define_max(4, Zerg Queen)
+	define_max(4, Zerg Defiler)
+	capt_expand()
+	guard_all()
+	help_iftrouble()
+	max_force(65535)
+	multirun(Pro1 0000)
+	farms_timing()
+	build(20, Zerg Drone, 80)
+	wait_buildstart(12, Zerg Drone)
+	build(1, Zerg Hatchery, 80)
+	wait_buildstart(1, Zerg Hatchery)
+	build(3, Zerg Extractor, 80)
+	build(1, Zerg Spawning Pool, 80)
+	wait_buildstart(1, Zerg Spawning Pool)
+	multirun(Pro1 0001)
+	build(10, Zerg Hatchery, 80)
+	wait_buildstart(10, Zerg Hatchery)
+	wait(1)
+
+	train(60, Zerg Zergling)
+	wait_train(60, Zerg Zergling)
+	send_suicide(0)
+	wait(1000)
+
+	defensebuild_gg(4, Zerg Zergling)
+	defenseuse_gg(4, Zerg Zergling)
+	tech(Burrowing, 30)
+	build(1, Zerg Lair, 80)
+	wait_buildstart(1, Zerg Lair)
+	multirun(Pro1 0002)
+	wait(1)
+
+	build(8, Zerg Lair, 80)
+	wait_buildstart(7, Zerg Lair)
+	multirun(Pro1 0003)
+	build(1, Zerg Hydralisk Den, 80)
+	wait_buildstart(1, Zerg Hydralisk Den)
+	multirun(Pro1 0004)
+	build(3, Zerg Evolution Chamber, 80)
+	wait_buildstart(3, Zerg Evolution Chamber)
+	wait(1)
+
+	train(50, Zerg Hydralisk)
+	wait_train(50, Zerg Hydralisk)
+	send_suicide(0)
+	wait(1000)
+
+	defensebuild_ag(1, Zerg Hydralisk)
+	defenseuse_ag(1, Zerg Hydralisk)
+	multirun(Pro1 0005)
+	tech(Lurker Aspect, 80)
+	defensebuild_gg(1, Zerg Lurker)
+	defenseuse_gg(1, Zerg Lurker)
+	build(2, Zerg Spire, 80)
+	wait_buildstart(2, Zerg Spire)
+	multirun(Pro1 0006)
+	build(1, Zerg Queen's Nest, 80)
+	wait_buildstart(1, Zerg Queen's Nest)
+	multirun(Pro1 0007)
+	wait(1)
+
+	train(50, Zerg Mutalisk)
+	wait_train(50, Zerg Mutalisk)
+	send_suicide(0)
+	wait(1000)
+
+	defensebuild_aa(2, Zerg Mutalisk)
+	defenseuse_aa(2, Zerg Mutalisk)
+	defensebuild_aa(2, Zerg Scourge)
+	defenseuse_aa(2, Zerg Scourge)
+	build(1, Zerg Hive, 80)
+	wait_buildstart(1, Zerg Hive)
+	build(1, Zerg Greater Spire, 80)
+	wait_buildstart(1, Zerg Greater Spire)
+	defensebuild_ga(1, Zerg Guardian)
+	defenseuse_ga(1, Zerg Guardian)
+	defensebuild_aa(1, Zerg Devourer)
+	defenseuse_aa(1, Zerg Devourer)
+	wait(1)
+
+	build(1, Zerg Ultralisk Cavern, 80)
+	wait_buildstart(1, Zerg Ultralisk Cavern)
+	multirun(Pro1 0008)
+	defensebuild_gg(1, Zerg Ultralisk)
+	defenseuse_gg(1, Zerg Ultralisk)
+	build(1, Zerg Defiler Mound, 80)
+	wait_buildstart(1, Zerg Defiler Mound)
+	multirun(Pro1 0009)
+	build(5, Zerg Hatchery, 80)
+	wait_buildstart(4, Zerg Hatchery)
+	build(5, Zerg Hive, 80)
+	wait_buildstart(5, Zerg Hive)
+	wait(1)
+
+	place_guard(Zerg Queen, 0)
+	place_guard(Zerg Queen, 1)
+	place_guard(Zerg Queen, 2)
+	place_guard(Zerg Defiler, 0)
+	place_guard(Zerg Defiler, 1)
+	place_guard(Zerg Defiler, 2)
+
+		--Pro1 0010--
+	wait(1000)
+
+	train(20, Zerg Scourge)
+	train(25, Zerg Guardian)
+	train(15, Zerg Devourer)
+	wait_train(20, Zerg Scourge)
+	wait_train(25, Zerg Guardian)
+	wait_train(15, Zerg Devourer)
+	send_suicide(0)
+	wait(1000)
+
+	train(12, Zerg Ultralisk)
+	train(15, Zerg Lurker)
+	train(25, Zerg Zergling)
+	train(25, Zerg Hydralisk)
+	wait_train(12, Zerg Ultralisk)
+	wait_train(15, Zerg Lurker)
+	wait_train(25, Zerg Zergling)
+	wait_train(25, Zerg Hydralisk)
+	send_suicide(0)
+	goto(Pro1 0010)
+
+
+		--Pro1 0000--
+	give_money()
+	wait(500)
+
+	goto(Pro1 0000)
+
+
+		--Pro1 0002--
+	upgrade(1, Pneumatized Carapace, 30)
+	wait(3000)
+
+	upgrade(1, Antennae, 30)
+	wait(3000)
+
+	upgrade(1, Ventral Sacs, 30)
+	stop()
+
+
+		--Pro1 0001--
+	upgrade(1, Metabolic Boost, 30)
+	stop()
+
+
+		--Pro1 0004--
+	upgrade(1, Muscular Augments, 30)
+	wait(3000)
+
+	upgrade(1, Grooved Spines, 30)
+	stop()
+
+
+		--Pro1 0008--
+	upgrade(1, Adrenal Glands, 30)
+	wait(3000)
+
+	upgrade(1, Chitinous Plating, 30)
+	wait(3000)
+
+	upgrade(1, Anabolic Synthesis, 30)
+	stop()
+
+
+		--Pro1 0007--
+	upgrade(1, Gamete Meiosis, 30)
+	wait(3000)
+
+	tech(Ensnare, 30)
+	wait(3000)
+
+	tech(Spawn Broodling, 30)
+	stop()
+
+
+		--Pro1 0009--
+	upgrade(1, Metasynaptic Node, 30)
+	wait(3000)
+
+	tech(Plague, 30)
+	stop()
+
+
+		--Pro1 0005--
+	upgrade(1, Zerg Melee Attacks, 30)
+	upgrade(1, Zerg Missile Attacks, 30)
+	upgrade(1, Zerg Carapace, 30)
+	wait(3500)
+
+	upgrade(2, Zerg Melee Attacks, 30)
+	upgrade(2, Zerg Missile Attacks, 30)
+	upgrade(2, Zerg Carapace, 30)
+	wait(3500)
+
+	upgrade(3, Zerg Melee Attacks, 30)
+	upgrade(3, Zerg Missile Attacks, 30)
+	upgrade(3, Zerg Carapace, 30)
+	stop()
+
+
+		--Pro1 0006--
+	upgrade(1, Zerg Flyer Attacks, 30)
+	upgrade(1, Zerg Flyer Carapace, 30)
+	wait(3500)
+
+	upgrade(2, Zerg Flyer Attacks, 30)
+	upgrade(2, Zerg Flyer Carapace, 30)
+	wait(3500)
+
+	upgrade(3, Zerg Flyer Attacks, 30)
+	upgrade(3, Zerg Flyer Carapace, 30)
+	stop()
+
+
+		--Pro1 0003--
+	build(10, Zerg Creep Colony, 80)
+	wait_buildstart(8, Zerg Creep Colony)
+	wait(100)
+
+	build(5, Zerg Sunken Colony, 80)
+	wait_buildstart(4, Zerg Sunken Colony)
+	wait(150)
+
+	build(5, Zerg Spore Colony, 80)
+	wait_buildstart(4, Zerg Spore Colony)
+	wait(200)
+
+	build(6, Zerg Creep Colony, 80)
+	wait_buildstart(5, Zerg Creep Colony)
+	wait(100)
+
+	build(3, Zerg Sunken Colony, 80)
+	wait_buildstart(2, Zerg Sunken Colony)
+	wait(150)
+
+	build(3, Zerg Spore Colony, 80)
+	wait_buildstart(2, Zerg Spore Colony)
+	stop()
+
+
