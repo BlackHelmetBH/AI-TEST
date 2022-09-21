@@ -1,5 +1,5 @@
-# stat_txt.tbl entry 1076: Protoss 1 - Zerg Town<0>
-Pro1(1076, 011, aiscript):
+# stat_txt.tbl entry 1076: Zerg Expansion Custom Level<0>
+ZMCx(1076, 011, aiscript):
 	start_campaign()
 	start_town()
 	wait(1)
@@ -15,7 +15,7 @@ Pro1(1076, 011, aiscript):
 	guard_all()
 	help_iftrouble()
 	max_force(65535)
-	multirun(Pro1 0000)
+	multirun(money)
 	farms_timing()
 	build(20, Zerg Drone, 80)
 	wait_buildstart(12, Zerg Drone)
@@ -24,7 +24,7 @@ Pro1(1076, 011, aiscript):
 	build(3, Zerg Extractor, 80)
 	build(1, Zerg Spawning Pool, 80)
 	wait_buildstart(1, Zerg Spawning Pool)
-	multirun(Pro1 0001)
+	multirun(ZerglingSpeed)
 	build(10, Zerg Hatchery, 80)
 	wait_buildstart(10, Zerg Hatchery)
 	wait(1)
@@ -39,15 +39,15 @@ Pro1(1076, 011, aiscript):
 	tech(Burrowing, 30)
 	build(1, Zerg Lair, 80)
 	wait_buildstart(1, Zerg Lair)
-	multirun(Pro1 0002)
+	multirun(OverlordUpgrades)
 	wait(1)
 
 	build(8, Zerg Lair, 80)
 	wait_buildstart(7, Zerg Lair)
-	multirun(Pro1 0003)
+	multirun(BuildColonies)
 	build(1, Zerg Hydralisk Den, 80)
 	wait_buildstart(1, Zerg Hydralisk Den)
-	multirun(Pro1 0004)
+	multirun(HydraliskUpgrades)
 	build(3, Zerg Evolution Chamber, 80)
 	wait_buildstart(3, Zerg Evolution Chamber)
 	wait(1)
@@ -59,16 +59,16 @@ Pro1(1076, 011, aiscript):
 
 	defensebuild_ag(1, Zerg Hydralisk)
 	defenseuse_ag(1, Zerg Hydralisk)
-	multirun(Pro1 0005)
+	multirun(GroundUpgrades)
 	tech(Lurker Aspect, 80)
 	defensebuild_gg(1, Zerg Lurker)
 	defenseuse_gg(1, Zerg Lurker)
 	build(2, Zerg Spire, 80)
 	wait_buildstart(2, Zerg Spire)
-	multirun(Pro1 0006)
+	multirun(AirUpgrades)
 	build(1, Zerg Queen's Nest, 80)
 	wait_buildstart(1, Zerg Queen's Nest)
-	multirun(Pro1 0007)
+	multirun(QueenUpgrades)
 	wait(1)
 
 	train(50, Zerg Mutalisk)
@@ -92,12 +92,12 @@ Pro1(1076, 011, aiscript):
 
 	build(1, Zerg Ultralisk Cavern, 80)
 	wait_buildstart(1, Zerg Ultralisk Cavern)
-	multirun(Pro1 0008)
+	multirun(UltraliskUpgrades)
 	defensebuild_gg(1, Zerg Ultralisk)
 	defenseuse_gg(1, Zerg Ultralisk)
 	build(1, Zerg Defiler Mound, 80)
 	wait_buildstart(1, Zerg Defiler Mound)
-	multirun(Pro1 0009)
+	multirun(DefilerUpgrades)
 	build(5, Zerg Hatchery, 80)
 	wait_buildstart(4, Zerg Hatchery)
 	build(5, Zerg Hive, 80)
@@ -111,7 +111,7 @@ Pro1(1076, 011, aiscript):
 	place_guard(Zerg Defiler, 1)
 	place_guard(Zerg Defiler, 2)
 
-		--Pro1 0010--
+		--FinalRushLoop--
 	wait(1000)
 
 	train(20, Zerg Scourge)
@@ -132,17 +132,17 @@ Pro1(1076, 011, aiscript):
 	wait_train(25, Zerg Zergling)
 	wait_train(25, Zerg Hydralisk)
 	send_suicide(0)
-	goto(Pro1 0010)
+	goto(FinalRushLoop)
 
 
-		--Pro1 0000--
+		--money--
 	give_money()
 	wait(500)
 
-	goto(Pro1 0000)
+	goto(money)
 
 
-		--Pro1 0002--
+		--OverlordUpgrades--
 	upgrade(1, Pneumatized Carapace, 30)
 	wait(3000)
 
@@ -153,12 +153,12 @@ Pro1(1076, 011, aiscript):
 	stop()
 
 
-		--Pro1 0001--
+		--ZerglingSpeed--
 	upgrade(1, Metabolic Boost, 30)
 	stop()
 
 
-		--Pro1 0004--
+		--HydraliskUpgrades--
 	upgrade(1, Muscular Augments, 30)
 	wait(3000)
 
@@ -166,7 +166,7 @@ Pro1(1076, 011, aiscript):
 	stop()
 
 
-		--Pro1 0008--
+		--UltraliskUpgrades--
 	upgrade(1, Adrenal Glands, 30)
 	wait(3000)
 
@@ -177,7 +177,7 @@ Pro1(1076, 011, aiscript):
 	stop()
 
 
-		--Pro1 0007--
+		--QueenUpgrades--
 	upgrade(1, Gamete Meiosis, 30)
 	wait(3000)
 
@@ -188,7 +188,7 @@ Pro1(1076, 011, aiscript):
 	stop()
 
 
-		--Pro1 0009--
+		--DefilerUpgrades--
 	upgrade(1, Metasynaptic Node, 30)
 	wait(3000)
 
@@ -196,7 +196,7 @@ Pro1(1076, 011, aiscript):
 	stop()
 
 
-		--Pro1 0005--
+		--GroundUpgrades--
 	upgrade(1, Zerg Melee Attacks, 30)
 	upgrade(1, Zerg Missile Attacks, 30)
 	upgrade(1, Zerg Carapace, 30)
@@ -213,7 +213,7 @@ Pro1(1076, 011, aiscript):
 	stop()
 
 
-		--Pro1 0006--
+		--AirUpgrades--
 	upgrade(1, Zerg Flyer Attacks, 30)
 	upgrade(1, Zerg Flyer Carapace, 30)
 	wait(3500)
@@ -227,7 +227,7 @@ Pro1(1076, 011, aiscript):
 	stop()
 
 
-		--Pro1 0003--
+		--BuildColonies--
 	build(10, Zerg Creep Colony, 80)
 	wait_buildstart(8, Zerg Creep Colony)
 	wait(100)
