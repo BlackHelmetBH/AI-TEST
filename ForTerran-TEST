@@ -1,0 +1,249 @@
+# stat_txt.tbl entry 1053: Terran 5 - Terran Main Town<0>
+Ter5(1053, 011, aiscript):
+	start_campaign()
+	wait(1)
+
+	start_town()
+	defaultbuild_off()
+	default_min(0)
+	wait(1)
+
+	max_force(65535)
+	capt_expand()
+	help_iftrouble()
+	guard_all()
+	multirun(Ter5 0000)
+	build(1, Terran Command Center, 80)
+	build(20, Terran SCV, 80)
+	wait_buildstart(12, Terran SCV)
+	farms_timing()
+	build(8, Terran Barracks, 80)
+	wait_buildstart(7, Terran Barracks)
+	wait(1)
+
+	train(15, Terran Marine)
+	wait_train(15, Terran Marine)
+	send_suicide(0)
+	wait(1000)
+
+	defensebuild_gg(1, Terran Marine)
+	defenseuse_gg(1, Terran Marine)
+	build(3, Terran Refinery, 80)
+	build(1, Terran Engineering Bay, 80)
+	wait_buildstart(1, Terran Engineering Bay)
+	multirun(Ter5 0001)
+	build(2, Terran Academy, 80)
+	wait_buildstart(2, Terran Academy)
+	multirun(Ter5 0002)
+	build(1, Terran Comsat Station, 80)
+	wait(1)
+
+	train(25, Terran Marine)
+	train(15, Terran Firebat)
+	train(8, Terran Medic)
+	wait_train(25, Terran Marine)
+	wait_train(15, Terran Firebat)
+	wait_train(8, Terran Medic)
+	send_suicide(0)
+	wait(1000)
+
+	defensebuild_gg(2, Terran Firebat)
+	defenseuse_gg(2, Terran Firebat)
+	build(1, Terran Engineering Bay, 80)
+	wait_buildstart(1, Terran Engineering Bay)
+	multirun(Ter5 0003)
+	build(10, Terran Factory, 80)
+	wait_buildstart(9, Terran Factory)
+	build(1, Terran Starport, 80)
+	build(1, Terran Armory, 80)
+	build(8, Terran Machine Shop, 80)
+	wait_buildstart(7, Terran Machine Shop)
+	multirun(Ter5 0004)
+	build(1, Terran Science Facility, 80)
+	wait(1)
+
+	train(15, Terran Vulture)
+	train(20, Terran Siege Tank<0>Tank Mode)
+	train(25, Terran Goliath)
+	wait_train(15, Terran Vulture)
+	wait_train(20, Terran Siege Tank<0>Tank Mode)
+	wait_train(25, Terran Goliath)
+	send_suicide(0)
+	wait(1000)
+
+	defensebuild_gg(1, Terran Vulture)
+	defenseuse_gg(1, Terran Vulture)
+	defensebuild_gg(2, Terran Siege Tank<0>Tank Mode)
+	defenseuse_gg(2, Terran Siege Tank<0>Tank Mode)
+	defensebuild_ag(2, Terran Goliath)
+	defenseuse_ag(2, Terran Goliath)
+	build(7, Terran Starport, 80)
+	wait_buildstart(7, Terran Starport)
+	build(8, Terran Control Tower, 80)
+	wait_buildstart(8, Terran Control Tower)
+	multirun(Ter5 0005)
+	wait(1)
+
+	train(30, Terran Wraith)
+	wait_train(30, Terran Wraith)
+	send_suicide(0)
+	wait(1000)
+
+	defensebuild_aa(1, Terran Wraith)
+	defenseuse_aa(1, Terran Wraith)
+	defensebuild_aa(1, Terran Valkyrie)
+	defenseuse_aa(1, Terran Valkyrie)
+	multirun(Ter5 0006)
+	build(1, Terran Science Facility, 80)
+	wait_buildstart(1, Terran Science Facility)
+	build(1, Terran Covert Ops, 80)
+	wait_buildstart(1, Terran Covert Ops)
+	multirun(Ter5 0007)
+	defensebuild_gg(1, Terran Ghost)
+	defenseuse_gg(1, Terran Ghost)
+	build(1, Terran Physics Lab, 80)
+	wait_buildstart(1, Terran Physics Lab)
+	multirun(Ter5 0008)
+	defensebuild_aa(1, Terran Battlecruiser)
+	defenseuse_aa(1, Terran Battlecruiser)
+	wait(1)
+
+	place_guard(Terran Medic, 0)
+	place_guard(Terran Medic, 1)
+	place_guard(Terran Medic, 2)
+	place_guard(Terran Science Vessel, 0)
+	place_guard(Terran Science Vessel, 1)
+	place_guard(Terran Science Vessel, 2)
+	place_guard(Terran Ghost, 0)
+	place_guard(Terran Ghost, 1)
+	place_guard(Terran Ghost, 2)
+
+		--Ter5 0009--
+	wait(1000)
+
+	train(30, Terran Marine)
+	train(20, Terran Firebat)
+	train(10, Terran Medic)
+	train(12, Terran Ghost)
+	wait_train(30, Terran Marine)
+	wait_train(20, Terran Firebat)
+	wait_train(10, Terran Medic)
+	wait_train(12, Terran Ghost)
+	send_suicide(0)
+	wait(1000)
+
+	train(35, Terran Goliath)
+	train(35, Terran Siege Tank<0>Tank Mode)
+	wait_train(35, Terran Goliath)
+	wait_train(35, Terran Siege Tank<0>Tank Mode)
+	send_suicide(0)
+	wait(1000)
+
+	train(60, Terran Wraith)
+	wait_train(60, Terran Wraith)
+	send_suicide(0)
+	wait(1000)
+
+	train(12, Terran Battlecruiser)
+	wait_train(12, Terran Battlecruiser)
+	send_suicide(0)
+	goto(Ter5 0009)
+
+
+		--Ter5 0000--
+	give_money()
+	wait(1)
+
+	goto(Ter5 0000)
+
+
+		--Ter5 0001--
+	build(4, Terran Bunker, 80)
+	wait_buildstart(4, Terran Bunker)
+	build(10, Terran Missile Turret, 80)
+	wait_buildstart(10, Terran Missile Turret)
+	stop()
+
+
+		--Ter5 0002--
+	upgrade(1, U-238 Shells, 80)
+	wait(3000)
+
+	tech(Stim Packs, 80)
+	wait(3000)
+
+	upgrade(1, Caduceus Reactor, 80)
+	wait(3000)
+
+	tech(Restoration, 80)
+	tech(Optical Flare, 80)
+	stop()
+
+
+		--Ter5 0003--
+	upgrade(1, Terran Infantry Weapons, 80)
+	upgrade(1, Terran Infantry Armor, 80)
+	wait(3000)
+
+	upgrade(2, Terran Infantry Weapons, 80)
+	upgrade(2, Terran Infantry Armor, 80)
+	wait(3500)
+
+	upgrade(3, Terran Infantry Weapons, 80)
+	upgrade(3, Terran Infantry Armor, 80)
+	stop()
+
+
+		--Ter5 0004--
+	upgrade(1, Ion Thrusters, 80)
+	tech(Spider Mines, 80)
+	wait(3000)
+
+	tech(Tank Siege Mode, 80)
+	wait(3000)
+
+	upgrade(1, Charon Booster, 80)
+	stop()
+
+
+		--Ter5 0005--
+	upgrade(1, Apollo Reactor, 80)
+	wait(3000)
+
+	tech(Cloaking Field, 80)
+	stop()
+
+
+		--Ter5 0006--
+	upgrade(1, Titan Reactor, 80)
+	wait(3000)
+
+	tech(Irradiate, 80)
+	wait(3000)
+
+	tech(EMP Shockwave, 80)
+	stop()
+
+
+		--Ter5 0007--
+	upgrade(1, Ocular Implants, 80)
+	wait(3000)
+
+	tech(Personnel Cloaking, 80)
+	wait(3000)
+
+	upgrade(1, Moebius Reactor, 80)
+	wait(3000)
+
+	tech(Lockdown, 80)
+	stop()
+
+
+		--Ter5 0008--
+	upgrade(1, Colossus Reactor, 80)
+	wait(3000)
+
+	tech(Yamato Gun, 80)
+	stop()
+
+
